@@ -40,9 +40,9 @@ import java.util.*;
 		//CODE TO CREATE FILE AND ADD DATA TO IT
 		static void create() throws IOException
 		{
-			Scanner data=new Scanner(System.in);
+			Scanner input=new Scanner(System.in);
 			System.out.println("ENTER THE NAME OF THE FILE");
-			String filename=data.next();
+			String filename=input.next();
 			createfile(filename);
 			System.out.println("ENTER THE KEY AND VALUE SEPERATED BY SPACE TO ADD TO THE FILE");
 			String key1="";
