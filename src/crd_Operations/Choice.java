@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 	public class Choice {
+		//CODE TO CHECK THE EXISTANCE OF THE FILE
 		static int file_existance(String filename)
 		{
 			File file=new File(filename);
@@ -12,6 +13,7 @@ import java.util.*;
 			}
 			return 0;
 		}
+		//CODE TO CREATE A NEW FILE
 		static void createfile(String filename)
 		{
 			try
@@ -34,6 +36,8 @@ import java.util.*;
 				e.printStackTrace();
 			}
 		}
+		
+		//CODE TO CREATE FILE AND ADD DATA TO IT
 		static void create() throws IOException
 		{
 			Scanner data=new Scanner(System.in);
@@ -63,6 +67,7 @@ import java.util.*;
 				
 			}	
 		}
+		//TO READ THE VALUE FROM THE FILE
 		static void read()
 		{
 			try (Scanner data = new Scanner(System.in)) {
@@ -81,6 +86,7 @@ import java.util.*;
 				}
 			}
 		}
+		//TO DELETE THE VALUE
 		static void delete()
 		{
 			try (Scanner data = new Scanner(System.in)) {
