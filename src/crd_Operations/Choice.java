@@ -45,26 +45,39 @@ import java.util.*;
 			String filename=data.next();
 			createfile(filename);
 			System.out.println("ENTER THE KEY AND VALUE SEPERATED BY SPACE TO ADD TO THE FILE");
-			String key="";
-			String value="";
-			while((key=data.next())!=null)
+			String key1="";
+			String value1="";
+			int test=1;
+			while(test!=0)
 			{
-			value=data.next();
+			key1=input.next();
+			value1=input.next();
 			System.out.println("IF YOU WISH TO ADD THE LIFE TIME ENTER 1 AND THEN ENTER THE CURRENT DATE IN THE FORMAT DD/MM/YYY AND THE LIFE TIME IN DAYS ELSE ENTER 0");
-			int flag=data.nextInt();
+			int flag=input.nextInt();
 			if(flag==0)
 			{
-				Operations object=new Operations(key,value);
-				object.add_data(filename);
+				Operations object=new Operations(key1,value1);
+				try {
+					object.add_data(filename);
+				}
+				catch (IOException e) 
+				{
+				e.printStackTrace();
+				}
 			}
 			else
 			{
-				String current_date=data.next();
-				int lifetime=data.nextInt();
-				Operations object=new Operations(key,value,current_date,lifetime);
+				String current_date=input.next();
+				int lifetime=input.nextInt();
+				Operations object=new Operations(key1,value1,current_date,lifetime);
+				try {
 				object.add_data(filename,flag);
+				} catch (IOException e) {
+				e.printStackTrace();
+				}
 			}
-				
+			System.out.println("IF YOU WISH TO END THE ENTRY OF DATA ENTER 0 ELSE ENTER 1");
+			test=input.nextInt();
 			}	
 		}
 		//TO READ THE VALUE FROM THE FILE
@@ -106,6 +119,12 @@ import java.util.*;
 					System.out.println("CREATE A FILE TO ADD DATA");
 				}
 			}
+		}
+		public static void main(String args[])
+		{
+			create();
+			read();
+			delete();
 		}
 	}
 	
