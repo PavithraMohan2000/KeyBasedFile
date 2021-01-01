@@ -105,10 +105,7 @@ package crd_Operations;
 				System.out.println(data[1]);
 				break;
 			}
-			else
-			{
-				System.out.println("THE KEY IS NOT FOUND");
-			}
+			
 			}  
 			fr.close();    //closes the stream and release the resources  
 			 
