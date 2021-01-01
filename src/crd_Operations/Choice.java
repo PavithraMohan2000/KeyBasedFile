@@ -78,7 +78,9 @@ import java.util.*;
 					System.out.println("THE FILE IS FOUND\n ENTER THE KEY TO FIND THE VALUE FROM THE FILE");
 					String key=data.next();
 					Operations object=new Operations(key);
-					object.read_value(filename);
+					int res=object.read_value(filename);
+					if(res==0)
+						System.out.println("THE DOES NOT EXIST");
 				}
 				else
 				{
