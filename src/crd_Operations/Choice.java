@@ -122,7 +122,13 @@ import java.util.*;
 		}
 		public static void main(String args[])
 		{
-			create();
+			try {
+				create();
+			} 
+			catch (IOException e) 
+			{
+				e.printStackTrace();
+			}
 			read();
 			delete();
 		}
