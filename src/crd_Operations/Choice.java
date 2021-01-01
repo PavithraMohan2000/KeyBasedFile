@@ -27,7 +27,7 @@ import java.util.*;
 				}
 				else
 				{
-					System.out.println("FILE WITH THIS NAME ALREADY EXIST, PLEASE TRY NEW NAME");
+					System.out.println("FILE WITH THIS NAME EXIST");
 				}
 			}
 			catch(IOException e)
